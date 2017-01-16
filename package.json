@@ -21,7 +21,7 @@
     "coverage": "npm run pretest && rm -rf coverage && istanbul cover jasmine && npm run coverage:remap",
     "coverage:remap": "remap-istanbul -i coverage/coverage.json -o coverage/lcov-ts.info -t lcovonly && remap-istanbul -i coverage/coverage.json -o coverage/html-report -t html",
     "coverage:open": "npm run coverage && open ./coverage/html-report/index.html",
-    "coveralls": "npm run coverage && cat ./coverage/lcov-ts.info | coveralls && rm -rf ./coverage"
+    "coveralls": "npm run coverage && cat ./coverage/lcov-ts.info | coveralls"
   },
   "repository": {
     "type": "git",

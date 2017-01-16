@@ -6,11 +6,21 @@ addons:
       - google-chrome
     packages:
       - google-chrome-stable
+  sonarqube:
+    branches:
+      - sonar
+jdk:
+  - oraclejdk8
+script:
+  - sonar-scanner
+cache:
+  directories:
+    - '$HOME/.sonar/cache'
 language: node_js
 node_js:
   - '6.5'
 script:
-  -  npm run coveralls && npm run test:integration
+  -  npm run coveralls && npm run test:integration && sonar-scanner
 before_install:
   - export DISPLAY=:99.0
   - sh -e /etc/init.d/xvfb start

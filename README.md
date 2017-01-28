@@ -28,10 +28,15 @@ You can customize the output of the reporter yourself: [see how](docs/customize-
 
 # Developement
 
-* install dependencies: `npm install`
-* compile sources: `npm run tsc`
-* launch unit tests: `npm test`
-* launch integration tests: `npm test:integration`
+## Requirements:
+* node >= v6.9
+* yarn
+
+## Commands:
+* install dependencies: `yarn install`
+* compile sources: `yarn compile`
+* launch unit tests: `yarn test`
+* launch integration tests: `yarn test:integration`
 
 # Contribution
 

@@ -103,7 +103,7 @@ export class ExecutionDisplay {
         if (this.suiteHierarchyDisplayed[this.suiteHierarchyDisplayed.length - 1] === suite) {
             this.suiteHierarchyDisplayed.pop();
         }
-        this.logger.newLine();
+        // this.logger.newLine();
         this.logger.decreaseIndent();
     }
 
@@ -127,7 +127,7 @@ export class ExecutionDisplay {
     }
 
     private displaySuite(suite: CustomReporterResult): void {
-        this.logger.newLine();
+        // this.logger.newLine();
         this.computeSuiteIndent();
         this.logger.process(suite, (displayProcessor: DisplayProcessor, object: CustomReporterResult, log: String) => {
             return displayProcessor.displaySuite(object, log);

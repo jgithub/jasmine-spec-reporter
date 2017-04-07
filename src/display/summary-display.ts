@@ -18,7 +18,7 @@ export class SummaryDisplay {
         const duration = this.configuration.summary.displayDuration ? ` in ${metrics.duration}` : "";
 
         this.logger.resetIndent();
-        this.logger.newLine();
+        // this.logger.newLine();
         if (this.configuration.summary.displaySuccessful && metrics.successfulSpecs > 0) {
             this.successesSummary();
         }
@@ -39,12 +39,12 @@ export class SummaryDisplay {
         this.logger.log("**************************************************");
         this.logger.log("*                   Successes                    *");
         this.logger.log("**************************************************");
-        this.logger.newLine();
+        // this.logger.newLine();
         for (let i = 0; i < this.specs.successful.length; i++) {
             this.successfulSummary(this.specs.successful[i], i + 1);
             this.logger.newLine();
         }
-        this.logger.newLine();
+        // this.logger.newLine();
         this.logger.resetIndent();
     }
 
@@ -56,12 +56,12 @@ export class SummaryDisplay {
         this.logger.log("**************************************************");
         this.logger.log("*                    Failures                    *");
         this.logger.log("**************************************************");
-        this.logger.newLine();
+        // this.logger.newLine();
         for (let i = 0; i < this.specs.failed.length; i++) {
             this.failedSummary(this.specs.failed[i], i + 1);
-            this.logger.newLine();
+            // this.logger.newLine();
         }
-        this.logger.newLine();
+        // this.logger.newLine();
         this.logger.resetIndent();
     }
 
@@ -86,9 +86,9 @@ export class SummaryDisplay {
         this.logger.newLine();
         for (let i = 0; i < this.specs.pending.length; i++) {
             this.pendingSummary(this.specs.pending[i], i + 1);
-            this.logger.newLine();
+            // this.logger.newLine();
         }
-        this.logger.newLine();
+        // this.logger.newLine();
         this.logger.resetIndent();
     }
 
